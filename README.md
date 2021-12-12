@@ -44,4 +44,4 @@ The **Regno Standard** defines a standard formatting of a collection of JSON tex
 
 3. Implement the **Regno Standard** into your existing product or as a standalone API. The official commercial API for the **Regno Standard** is implemented by Regno Software. Visit www.regno.ai or www.regnocloud.com for more information.
 
-For more information about the **Regno Standard**, please contact us at standard.regno.ai
+For more information about the **Regno Standard**, please contact us at standard@regno.ai

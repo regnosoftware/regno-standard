@@ -36,7 +36,7 @@ The **Regno Standard** has been designed from the ground up by Regno Software, t
 Licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License to be used by any individual, group or organisation.
 
 # Getting started
-The **Regno Standard** defines a standard formatting of a collection of JSON text documents. The official API implementation of the **Regno Standard** can be obtained from Regno Software. Developers can use this documentation to assist in integrating the **Regno Standard** into their own existing API or product suite. Read the step-by-step guide:
+The **Regno Standard** defines a standard formatting of a collection of JSON text documents. The official API implementation of the **Regno Standard** can be obtained from Regno Software. Developers can use this documentation to assist in integrating the **Regno Standard** into their own existing API or product suite.
 
 1. Read the Documentation for the **Regno Standard** by clicking the Documentation link in the side bar to get an overview of the structure and usage of the the **Regno Standard**.
 

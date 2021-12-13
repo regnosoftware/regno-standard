@@ -133,6 +133,7 @@
                                     <li><a href="doc_data_paramStatDoc.html">ParamStatDoc</a></li>
                                     <li><a href="doc_data_paramStringValueDoc.html">ParamStringValueDoc</a></li>
                                     <li><a href="doc_data_statDataDoc.html">StatDoc</a></li>
+	                                <li><a href="doc_data_tagDataDoc.html">TagDoc</a></li>
                                     <li><a href="doc_data_timeSpanDoc.html">TimeSpanDoc</a></li>
                                 </ul>
                             </li>
@@ -199,7 +200,7 @@
             </tr>
             <tr>
                 <td><strong><i>subConfigDocs</i></strong></td>
-                <td>Array <a href="doc_conf_subConfigDoc.html">SubConfigDoc</a></td>
+                <td>Array [<a href="doc_conf_subConfigDoc.html">SubConfigDoc</a>]</td>
                 <td>No</td>
                 <td>-</td>
                 <td>
@@ -208,7 +209,7 @@
             </tr>
             <tr>
                 <td><strong><i>timeSpanDocs</i></strong></td>
-                <td>Array <a href="doc_data_timeSpanDoc.html">TimeSpanDoc</a></td>
+                <td>Array [<a href="doc_data_timeSpanDoc.html">TimeSpanDoc</a>]</td>
                 <td>No</td>
                 <td>-</td>
                 <td>
@@ -287,18 +288,18 @@
             <td>Data</td>
             <td>
                 A fixed type description of the primary data held by this document.
-                Valid options are: <strong>Configuration, Data, Experiment, Simulation, Run, Period, Session, Event, Day, Month, Year, Lap</strong>.
+                Valid options are: <strong>Configuration, Data, Experiment, Simulation, Run, Period, Session, Event, Day, Month, Year, Lap, Audio, Video, Metrics</strong>.
             </td>
         </tr>
-            <tr>
-                <td><strong><i>tags</i></strong></td>
-                <td>Array [String, String]</td>
+        <tr>
+            <td><strong><i>tags</i></strong></td>
+	        <td>Array [<a href="doc_data_tagDataDoc.html">TagDoc</a>]</td>
                 <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of key/pair free form string values. Used to store meta data related to the data stored by this document.
-                </td>
-            </tr>
+            <td>-</td>
+            <td>
+                An array of <a href="doc_data_tagDataDoc.html">TagDoc</a> (key/pair) free form string values. Used to store meta data related to the data stored by this document.
+            </td>
+        </tr>
             <tr>
                 <td><strong><i>configDefsDocIds</i></strong></td>
                 <td>Array [String]</td>
@@ -312,7 +313,7 @@
             </tr>
             <tr>
                 <td><strong><i>identityDocIds</i></strong></td>
-                <td>String</td>
+	            <td>Array [String]</td>
                 <td>No</td>
                 <td>-</td>
                 <td>

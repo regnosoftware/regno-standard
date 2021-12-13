@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<strong>Regno Standard</strong> ParamArrayValueDoc documentation">
-    <meta name="keywords" content="<strong>Regno Standard</strong>, Regno, Standard, Documentation, Data, ParamArrayValueDoc">
+    <meta name="description" content="<strong>Regno Standard</strong> FAQ">
+    <meta name="keywords" content="<strong>Regno Standard</strong>, Regno, Standard, FAQ, Frequently, Asked, Questions">
 
-    <title><strong>Regno Standard</strong> - Documentation - Data Documents - ParamArrayValueDoc</title>
+    <title><strong>Regno Standard</strong> - FAQ</title>
 
     <!-- styles -->
     <link href="assets/css/theDocs.all.css" rel="stylesheet">
@@ -52,8 +52,8 @@
                 <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="doc_documents.html">Documentation</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="doc_documents.html">Documentation</a></li>
+                        <li class="active"><a href="faq.html">FAQ</a></li>
                         <li><a href="support.html">Support</a></li>
                         <li><a href="implement.html">Implement</a></li>
                     </ul>
@@ -76,7 +76,7 @@
 
             <li><a href="index.html">Overview</a></li>
 
-            <li class="active"><a href="#">Documentation</a>
+            <li><a href="#">Documentation</a>
                 <ul class="dropable">
                     <li><a href="doc_documents.html">Overview</a></li>
                     <!--<li><a href="doc_toc.html">Table of Contents</a></li>-->
@@ -84,7 +84,7 @@
                     <li><a href="doc_status.html">Status & Location</a></li>
                     <li><a href="doc_namingConvention.html">Naming Conventions</a></li>
 
-                    <li class="active"><a href="#">Documents</a>
+                    <li><a href="#">Documents</a>
                         <ul>
                             <li><a href="#">Configuration</a>
                                 <ul>
@@ -119,7 +119,7 @@
                                 </ul>
                             </li>
 
-                            <li class="active"><a href="#">Data</a>
+                            <li><a href="#">Data</a>
                                 <ul>
                                     <li><a href="doc_data_channelSamplesDoc.html">ChannelSamplesDoc</a></li>
                                     <li><a href="doc_data_configDoc.html">ConfigDataDoc</a></li>
@@ -127,7 +127,7 @@
                                     <li><a href="doc_data_mediaDataDoc.html">MediaDataDoc</a></li>
                                     <li><a href="doc_data_param2DMapValueDoc.html">Param2DMapValueDoc</a></li>
                                     <li><a href="doc_data_param3DMapValueDoc.html">Param3DMapValueDoc</a></li>
-                                    <li class="active"><a href="doc_data_paramArrayValueDoc.html">ParamArrayValueDoc</a></li>
+                                    <li><a href="doc_data_paramArrayValueDoc.html">ParamArrayValueDoc</a></li>
                                     <li><a href="doc_data_paramSamplesDoc.html">ParamSamplesDoc</a></li>
                                     <li><a href="doc_data_paramScalarValueDoc.html">ParamScalarValueDoc</a></li>
                                     <li><a href="doc_data_paramStatDoc.html">ParamStatDoc</a></li>
@@ -147,7 +147,7 @@
                 </ul>
             </li>
 
-            <li><a href="faq.html">FAQ</a></li>
+            <li class="active"><a href="faq.html">FAQ</a></li>
 
             <li><a href="license.html">Licence</a></li>
 
@@ -163,155 +163,93 @@
 
                 
 <section>
-        <ol class="breadcrumb">        <li><a href="index.html">Home</a></li>        <li><a href="#">Documentation</a></li>        <li><a href="#">Data Documents</a></li>        <li class="active">ParamArrayValueDoc</li>    </ol>
 
-    <h2 id="overview">Data - <strong>ParamArrayValueDoc</strong></h2>
-    <p>
-        The <strong>ParamArrayValueDoc</strong> document is a data
-        document that contains the properties and a set of values for a single configuration parameter.
-    </p>
-</section>
+    <h2 id="faq">FAQ</h2>
 
-<section>
-    <table class="table table-bordered table-striped table-info">
-        <thead>
-            <tr>
-                <th>Field</th>
-                <th nowrap>Data Type</th>
-                <th>Required</th>
-                <th>Default</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
+    <div class="faq">
 
-            </tr>
-            <tr>
-                <td><strong><i>configDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document
-                    that this document is associated with.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>paramDefDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_def_paramDefinitionDoc.html"><strong>ParamDefinitionDoc</strong></a> that
-                    holds the properties for the parameter associated with the data values stored in this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>time</i></strong></td>
-                <td>64-bit Long</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying the time of the associated data. The timestamp represents
-                    the number of nanoseconds since the reference time of midnight, 1st January 1970.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>values</i></strong></td>
-                <td>Array [64-bit Double]</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    An array of 64-bit Double data values.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>constant</i></strong></td>
-                <td>Boolean</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    Value indicating if the current data is constant within the current configuration.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>ParamArrayValueDoc</td>
-                <td>
-                    The fixed value is always set to <strong>ParamArrayValueDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <ul>
+            <li>
+                <h6>I'd like to make a change or addition to the <strong>Regno Standard</strong>, how can I do this?</h6>
+                <div>
+                    All changes to the <strong>Regno Standard</strong> are handled by the Working Group who govern and control variations to
+                    the <strong>Regno Standard</strong>.
+                    <br />
+                    The Working Group are keen to develop the <strong>Regno Standard</strong> so that it satisfies a diverse range
+                    of data requirements; they are interested in any changes, additions or comments that you
+                    have regarding the <strong>Regno Standard</strong>.
+                    <br />
+                    If you would like more details about the <strong>Regno Standard</strong> Working Group or would like to become involved, please
+                    contact <a href="mailto:standard@regno.ai?subject=I would like to Contribute to the Regno Standard">us here</a>.
+                </div>
+            </li>
+            <li>
+                <h6>Is it possible to get a PDF copy of the <strong>Regno Standard</strong>?</h6>
+                <div>
+                    Please contact <a href="mailto:standard@regno.ai?subject=I would be interested in getting a copy of the Regno Standard Documentation as a PDF">us here</a> to inquire about getting a pdf copy of the <strong>Regno Standard</strong>.
+                </div>
+            </li>
+            <li>
+                <h6>How is the <strong>Regno Standard</strong> licensed?</h6>
+                <div>
+                    The <strong>Regno Standard</strong> is Licensed under a <a href="license.html">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a> to be used by any individual, group or organisation.
+                    <br/>
+                    For more details including the full licence please visit
+                    the <a href="license.html">Licence Section</a>.
+                    <br/>
+                </div>
+            </li>
+            <li>
+                <h6>Who owns and maintains the <strong>Regno Standard</strong>?</h6>
+                <div>
+                    The <strong>Regno Standard</strong> is owned by the Working Group and currently maintained by <a target="_blank" href="http://www.regnosoftware.com"><strong>Regno Software</strong></a>.
+                    who manage all releases of the <strong>Regno Standard</strong>, 
+                    as well as storage and version control. 
+                </div>
+            </li>
+            <li>
+                <h6>How is security implemented in the <strong>Regno Standard</strong>?</h6>
+                <div>
+                    The <strong>Regno Standard</strong> includes scope for <a href="doc_ident_identityDoc.html">Identity documents</a> that are used to set granular
+                    document ownership and access rights. The <a target="_blank" href="http://www.regnosoftware.com"><strong>Regno Software</strong></a> API implementation of the
+                    <strong>Regno Standard</strong> makes use this functionality for high level rights control, additional security is handled at the network storage and Cloud level.
+                    <br />
+                </div>
+            </li>
+            <li>
+                <h6>Who is the target audience for the <strong>Regno Standard</strong>?</h6>
+                <div>
+                    The <strong>Regno Standard</strong> had been designed to be used by a diverse range of commerical and private
+                    organisations including Formula 1 and other Motorsport, event timing system providers,
+                    financial trading institutions and by pharmaceutical companies.
+                    <br />
+                    <br />
+                    If you are using the <strong>Regno Standard</strong> we'd love to hear about it, drop us an
+                    <a href="mailto:standard@regno.ai?subject=I use the Regno Standard">standard@regno.ai</a>
+                    <br />
+                    <br />
+                </div>
+            </li>
+            <li>
+                <h6>I’d like to use the <strong>Regno Standard</strong>, is there an API that I can use?</h6>
+                <div>
+                    The official API implementation of the <strong>Regno Standard</strong> is provided by <a target="_blank" href="http://www.regnosoftware.com"><strong>Regno Software</strong></a>,
+                    and is available for download. Users, Groups or Organisations can also incorporate the <strong>Regno Standard</strong> into their existing API product suite.
+                    <br />
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="callout callout-info" role="alert">
+        <p>
+            If you would like to know more about the <strong>Regno Standard</strong>, please
+            contact <a href="mailto:standard@regno.ai">standard@regno.ai</a>.
+        </p>
+    </div>
 
 </section>
-
-<!--Auth0 Script-->
-<script>
-    (
-        function () {
-            var webAuth = new auth0.WebAuth({
-                clientID: 'v1yRbI8lsjcElFtgffwKuJ7n0UWzJTMW',
-                domain: 'regno.eu.auth0.com',
-                redirectUri: 'http://regno.ai/standard/doc_data_paramArrayValueDoc.html',
-                audience: 'https://regno.eu.auth0.com/api/v2/',
-                scope: 'openid',
-                responseType: 'token id_token'
-            });
-
-            function handleAuthentication() {
-                webAuth.parseHash({ hash: window.location.hash }, function (err, authResult) {
-                    console.log(err);
-                    console.log(authResult);
-
-                    if (authResult && authResult.accessToken && authResult.idToken) {
-                        window.location.hash = '';
-                        console.log(authResult.accessToken);
-                        console.log(authResult.expirationTime);
-                        localStorage.setItem("auth0.AuthResult.Token", authResult.accessToken);
-                        localStorage.setItem("auth0.AuthResult.ExpirationTime", new Date().getTime() + (authResult.expiresIn * 1000));
-                    }
-                    else if (err != null) {
-                        alert('Authentication Failed' + err.errorDescription);
-                        window.location = 'http://regno.ai/standard/doc_documents.html';
-                    }
-                    else {
-                        webAuth.authorize();
-                    }
-                });
-            }
-
-            var authResultaccessToken = localStorage.getItem("auth0.AuthResult.Token");
-            var authResultexpirationTime = localStorage.getItem("auth0.AuthResult.ExpirationTime");
-
-            console.log("l:" + authResultaccessToken);
-            console.log("l:" + authResultexpirationTime);
-
-            if (!authResultaccessToken) {
-                handleAuthentication();
-            }
-            else {
-                if (authResultexpirationTime < new Date().getTime()) {
-                    //webAuth.checkSession({}, function (err, authResult) {
-                    //    if(err)
-                    //    {
-                    handleAuthentication();
-                    //    }
-                    //});
-                }
-            }
-        })();
-</script>
 
             </article>
             <!-- end main content -->

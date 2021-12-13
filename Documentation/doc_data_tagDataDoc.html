@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<strong>Regno Standard</strong> ParamArrayValueDoc documentation">
-    <meta name="keywords" content="<strong>Regno Standard</strong>, Regno, Standard, Documentation, Data, ParamArrayValueDoc">
+    <meta name="description" content="<strong>Regno Standard</strong> TagDataDoc documentation">
+    <meta name="keywords" content="<strong>Regno Standard</strong>, Regno, Standard, Documentation, Data, TagDataDoc">
 
-    <title><strong>Regno Standard</strong> - Documentation - Data Documents - ParamArrayValueDoc</title>
+    <title><strong>Regno Standard</strong> - Documentation - Data Documents - TagDataDoc</title>
 
     <!-- styles -->
     <link href="assets/css/theDocs.all.css" rel="stylesheet">
@@ -127,13 +127,13 @@
                                     <li><a href="doc_data_mediaDataDoc.html">MediaDataDoc</a></li>
                                     <li><a href="doc_data_param2DMapValueDoc.html">Param2DMapValueDoc</a></li>
                                     <li><a href="doc_data_param3DMapValueDoc.html">Param3DMapValueDoc</a></li>
-                                    <li class="active"><a href="doc_data_paramArrayValueDoc.html">ParamArrayValueDoc</a></li>
+                                    <li><a href="doc_data_paramArrayValueDoc.html">ParamArrayValueDoc</a></li>
                                     <li><a href="doc_data_paramSamplesDoc.html">ParamSamplesDoc</a></li>
                                     <li><a href="doc_data_paramScalarValueDoc.html">ParamScalarValueDoc</a></li>
                                     <li><a href="doc_data_paramStatDoc.html">ParamStatDoc</a></li>
                                     <li><a href="doc_data_paramStringValueDoc.html">ParamStringValueDoc</a></li>
                                     <li><a href="doc_data_statDataDoc.html">StatDoc</a></li>
-	                                <li><a href="doc_data_tagDataDoc.html">TagDoc</a></li>
+	                                <li class="active"><a href="doc_data_tagDataDoc.html">TagDoc</a></li>
                                     <li><a href="doc_data_timeSpanDoc.html">TimeSpanDoc</a></li>
                                 </ul>
                             </li>
@@ -163,12 +163,12 @@
 
                 
 <section>
-        <ol class="breadcrumb">        <li><a href="index.html">Home</a></li>        <li><a href="#">Documentation</a></li>        <li><a href="#">Data Documents</a></li>        <li class="active">ParamArrayValueDoc</li>    </ol>
+        <ol class="breadcrumb">        <li><a href="index.html">Home</a></li>        <li><a href="#">Documentation</a></li>        <li><a href="#">Data Documents</a></li>        <li class="active">TagDoc</li>    </ol>
 
-    <h2 id="overview">Data - <strong>ParamArrayValueDoc</strong></h2>
+    <h2 id="overview">Data - <strong>TagDoc</strong></h2>
     <p>
-        The <strong>ParamArrayValueDoc</strong> document is a data
-        document that contains the properties and a set of values for a single configuration parameter.
+        The <strong>TagDoc</strong> document is a data
+        document that contains the key value pair that makes up a tag.
     </p>
 </section>
 
@@ -185,77 +185,27 @@
         </thead>
         <tbody>
             <tr>
-                <td><strong><i>id</i></strong></td>
+                <td><strong><i>key</i></strong></td>
                 <td>String</td>
                 <td>Yes</td>
                 <td>-</td>
                 <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
+                    Key of the Tag.
                 </td>
-
             </tr>
             <tr>
-                <td><strong><i>configDocId</i></strong></td>
+                <td><strong><i>value</i></strong></td>
                 <td>String</td>
                 <td>Yes</td>
                 <td>-</td>
                 <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document
-                    that this document is associated with.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>paramDefDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_def_paramDefinitionDoc.html"><strong>ParamDefinitionDoc</strong></a> that
-                    holds the properties for the parameter associated with the data values stored in this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>time</i></strong></td>
-                <td>64-bit Long</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying the time of the associated data. The timestamp represents
-                    the number of nanoseconds since the reference time of midnight, 1st January 1970.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>values</i></strong></td>
-                <td>Array [64-bit Double]</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    An array of 64-bit Double data values.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>constant</i></strong></td>
-                <td>Boolean</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    Value indicating if the current data is constant within the current configuration.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>ParamArrayValueDoc</td>
-                <td>
-                    The fixed value is always set to <strong>ParamArrayValueDoc</strong>.
+                    Value of the Tag.
                 </td>
             </tr>
         </tbody>
     </table>
 
 </section>
-
 <!--Auth0 Script-->
 <script>
     (
@@ -263,7 +213,7 @@
             var webAuth = new auth0.WebAuth({
                 clientID: 'v1yRbI8lsjcElFtgffwKuJ7n0UWzJTMW',
                 domain: 'regno.eu.auth0.com',
-                redirectUri: 'http://regno.ai/standard/doc_data_paramArrayValueDoc.html',
+                redirectUri: 'http://regno.ai/standard/doc_data_tagDataDoc.html',
                 audience: 'https://regno.eu.auth0.com/api/v2/',
                 scope: 'openid',
                 responseType: 'token id_token'

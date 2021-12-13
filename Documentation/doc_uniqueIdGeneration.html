@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<strong>Regno Standard</strong> ParamArrayValueDoc documentation">
-    <meta name="keywords" content="<strong>Regno Standard</strong>, Regno, Standard, Documentation, Data, ParamArrayValueDoc">
+    <meta name="description" content="<strong>Regno Standard</strong> Format String documentation">
+    <meta name="keywords" content="<strong>Regno Standard</strong>, Regno, Standard, Documentation, Unique Id Generation">
 
-    <title><strong>Regno Standard</strong> - Documentation - Data Documents - ParamArrayValueDoc</title>
+    <title><strong>Regno Standard</strong> - Documentation - Unique Id Generation</title>
 
     <!-- styles -->
     <link href="assets/css/theDocs.all.css" rel="stylesheet">
@@ -84,7 +84,7 @@
                     <li><a href="doc_status.html">Status & Location</a></li>
                     <li><a href="doc_namingConvention.html">Naming Conventions</a></li>
 
-                    <li class="active"><a href="#">Documents</a>
+                    <li><a href="#">Documents</a>
                         <ul>
                             <li><a href="#">Configuration</a>
                                 <ul>
@@ -119,7 +119,7 @@
                                 </ul>
                             </li>
 
-                            <li class="active"><a href="#">Data</a>
+                            <li><a href="#">Data</a>
                                 <ul>
                                     <li><a href="doc_data_channelSamplesDoc.html">ChannelSamplesDoc</a></li>
                                     <li><a href="doc_data_configDoc.html">ConfigDataDoc</a></li>
@@ -127,7 +127,7 @@
                                     <li><a href="doc_data_mediaDataDoc.html">MediaDataDoc</a></li>
                                     <li><a href="doc_data_param2DMapValueDoc.html">Param2DMapValueDoc</a></li>
                                     <li><a href="doc_data_param3DMapValueDoc.html">Param3DMapValueDoc</a></li>
-                                    <li class="active"><a href="doc_data_paramArrayValueDoc.html">ParamArrayValueDoc</a></li>
+                                    <li><a href="doc_data_paramArrayValueDoc.html">ParamArrayValueDoc</a></li>
                                     <li><a href="doc_data_paramSamplesDoc.html">ParamSamplesDoc</a></li>
                                     <li><a href="doc_data_paramScalarValueDoc.html">ParamScalarValueDoc</a></li>
                                     <li><a href="doc_data_paramStatDoc.html">ParamStatDoc</a></li>
@@ -142,7 +142,7 @@
                     </li>
 
                     <li><a href="doc_formatStrings.html">Format Strings</a></li>
-                    <li><a href="doc_uniqueIdGeneration.html">Unique Id Generation</a></li>
+                    <li class="active"><a href="doc_uniqueIdGeneration.html">Unique Id Generation</a></li>
 
                 </ul>
             </li>
@@ -163,107 +163,43 @@
 
                 
 <section>
-        <ol class="breadcrumb">        <li><a href="index.html">Home</a></li>        <li><a href="#">Documentation</a></li>        <li><a href="#">Data Documents</a></li>        <li class="active">ParamArrayValueDoc</li>    </ol>
+        <ol class="breadcrumb">        <li><a href="index.html">Home</a></li>        <li><a href="#">Documentation</a></li>        <li class="active">Unique Id Generation</li>    </ol>
 
-    <h2 id="overview">Data - <strong>ParamArrayValueDoc</strong></h2>
+    <h2 id="overview">Documentation - Unique Id Generation</h2>
     <p>
-        The <strong>ParamArrayValueDoc</strong> document is a data
-        document that contains the properties and a set of values for a single configuration parameter.
+        All documents conforming to the <strong>Regno Standard</strong> must be given a unique identifier at creation time.
+        <br />
+        <br />
+        The allocation of a unique identifier per document allows for both document parenting, for example
+        the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document and all associated child documents, and for the efficient
+        reuse of documents, for example the <a href="doc_def_paramDefinitionDoc.html"><strong>ParamDefinitionDoc</strong></a> document.
+        <br />
+        <br />
+        The recommended method for the generation of the unique identifier string is by the calculation of a
+        hash of all fields and values (excluding the <i>id</i> field) that are contained in the document. For some
+        documents, some fields are excluded from the hash generation to allow for the updating of document data
+        without requiring a new document hash to be generated. These additional fields that are to be excluded in the
+        hash generation are noted in the Description column text for each appropriate field.
+        <br />
+        <br />
+        By employing a hash value as the document identifier, each time a new document is created, the new
+        document can be checked to validate if the document already exists within the document store, and
+        if so the existing document can be reused without any action, saving both storage and compute resource.
+        <br />
+        <br />
+        Employing a hash as the unique identifier also enables data pools of documents to be merged and
+        synchronised from different data sources and locations without risk of data corruption.
     </p>
-</section>
-
-<section>
-    <table class="table table-bordered table-striped table-info">
-        <thead>
-            <tr>
-                <th>Field</th>
-                <th nowrap>Data Type</th>
-                <th>Required</th>
-                <th>Default</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
-
-            </tr>
-            <tr>
-                <td><strong><i>configDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document
-                    that this document is associated with.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>paramDefDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_def_paramDefinitionDoc.html"><strong>ParamDefinitionDoc</strong></a> that
-                    holds the properties for the parameter associated with the data values stored in this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>time</i></strong></td>
-                <td>64-bit Long</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying the time of the associated data. The timestamp represents
-                    the number of nanoseconds since the reference time of midnight, 1st January 1970.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>values</i></strong></td>
-                <td>Array [64-bit Double]</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    An array of 64-bit Double data values.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>constant</i></strong></td>
-                <td>Boolean</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    Value indicating if the current data is constant within the current configuration.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>ParamArrayValueDoc</td>
-                <td>
-                    The fixed value is always set to <strong>ParamArrayValueDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
 
 </section>
-
 <!--Auth0 Script-->
-<script>
+<!--<script>
     (
         function () {
             var webAuth = new auth0.WebAuth({
                 clientID: 'v1yRbI8lsjcElFtgffwKuJ7n0UWzJTMW',
                 domain: 'regno.eu.auth0.com',
-                redirectUri: 'http://regno.ai/standard/doc_data_paramArrayValueDoc.html',
+                redirectUri: 'http://regno.ai/standard/doc_uniqueIdGeneration.html',
                 audience: 'https://regno.eu.auth0.com/api/v2/',
                 scope: 'openid',
                 responseType: 'token id_token'
@@ -311,7 +247,7 @@
                 }
             }
         })();
-</script>
+</script>-->
 
             </article>
             <!-- end main content -->

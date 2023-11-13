@@ -184,103 +184,62 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
 
-            </tr>
-            <tr>
-                <td><strong><i>configDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document
-                    that this document is associated with.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>paramDefDocIds</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_def_paramDefinitionDoc.html"><strong>ParamDefinitionDocs</strong></a> associated with the data values stored in this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>startTime</i></strong></td>
-                <td>64-bit Long</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying start time of the data that this configuration holds.
-                    The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>endTime</i></strong></td>
-                <td>64-bit Long</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying end time of the data that this configuration holds.
-                    The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>intervalType</i></strong></td>
-                <td>Fixed String</td>
-                <td>Yes</td>
-                <td>Experiment</td>
-                <td>
-                    A fixed string representing the interval type. Valid options
-                    are: <strong>Experiment, Time, Session, Lap, Corner, Straight, Run</strong>.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>statDocs</i></strong></td>
-                <td>Array [<a href="doc_data_statDataDoc.html"><strong>StatDoc</strong></a>]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An Array of <a href="doc_data_statDataDoc.html"><strong>StatDoc</strong></a> that hold the calculated data associated with this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>ParamStatDoc</td>
-                <td>
-                    The fixed value is always set to <strong>ParamStatDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="alert alert-info" role="alert">
-        When used with the Regno Platform, following stats are optionally auto-generated.<br /><br />
-        <strong>min</strong>: <i>A 64-bit Double value representing the minimum sample value during the specified time range.</i><br />
-        <strong>max</strong>: <i>A 64-bit Double value representing the maximum sample value during the specified time range.</i><br />
-        <strong>range</strong>: <i>A 64-bit Double value representing the result of the (maximum – minimum) sample value during the specified time range.</i><br />
-        <strong>mean</strong>: <i>A 64-bit Double value representing the mean value for all samples during the specified time range.</i><br />
-        <strong>meanOfAbsolutes</strong>: <i>A 64-bit Double value representing the mean value for all samples during the specified time range. Each sample value is first converted to an absolute value before being used for the mean calculation.</i><br />
-        <strong>geometricMean</strong>: <i>A 64-bit Double value representing the geometric mean value of all samples during the specified time range.</i><br />
-        <strong>start</strong>: <i>A 64-bit Double value representing the first sample value at or after the specified startTime.</i><br />
-        <strong>end</strong>: <i>A 64-bit Double value representing the last sample value before the specified endTime. The time range is inclusive so the value could be the value at the specified endTime.</i><br />
-        <strong>change</strong>: <i>A 64-bit Double value representing the result of the (end – start) sample value during the specified time range.</i><br />
-        <strong>standardDeviation</strong>: <i>A 64-bit Double value representing the standard deviation of all samples during the specified time range.</i><br />
-        <strong>linearRegressionSlope</strong>: <i>A 64-bit Double value representing the slope of the linear regression of all samples in the specified time range.</i><br />
-        <strong>linearRegressionIntercept</strong>: <i>A 64-bit Double value representing the intercept value of the linear regression of all samples in the specified time range.</i><br />
-        <strong>linearRegressionRSquared</strong>: <i>A 64-bit Double value representing the statistical R Squared value of the linear regression of all samples in the specified time range.</i><br />
 
-    </div>
-</section>
+<tr>
+    <td><strong><i>startTime</i></strong></td>
+    <td>Int64</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A 64-bit Long timestamp specifying start time of the data that this configuration holds. The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.</td>
+</tr>
+
+<tr>
+    <td><strong><i>endTime</i></strong></td>
+    <td>Int64</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A 64-bit Long timestamp specifying end time of the data that this configuration holds. The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.</td>
+</tr>
+
+<tr>
+    <td><strong><i>intervalType</i></strong></td>
+    <td>Fixed String</td>
+    <td>Yes</td>
+    <td>Experiment</td>
+    <td>A fixed string representing the interval type. Valid options are: Experiment, Session, Lap, Corner, Straight, Run</td>
+</tr>
+
+<tr>
+    <td><strong><i>paramDefDocIds</i></strong></td>
+    <td>IList`1</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>An array of unique identifier (id) of the ParamDefinitionDoc document that holds the properties for the parameter associated with the data values stored in this document. </td>
+</tr>
+
+<tr>
+    <td><strong><i>statDocs</i></strong></td>
+    <td>IList`1</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>An array of the StatDocs associated with the data values stored in this document. </td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -337,6 +296,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

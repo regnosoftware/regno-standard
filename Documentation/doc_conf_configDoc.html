@@ -189,150 +189,118 @@
             </tr>
         </thead>
         <tbody>
+
+
+<tr>
+    <td><strong><i>subConfigDocs</i></strong></td>
+    <td>SubConfigDoc[]</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>An array of SubConfigDocs that store the metadata of data associated with the current ConfigDoc.</td>
+</tr>
+
+<tr>
+    <td><strong><i>timeSpanDocs</i></strong></td>
+    <td>TimeSpanDoc[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of documents describing the segmented time spans of a configuration. Each document contains the properties and a data values for an individual time span instance.</td>
+</tr>
+
+<tr>
+    <td><strong><i>startTime</i></strong></td>
+    <td>Int64</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A 64-bit Long timestamp specifying start time of the data that this configuration holds. If this configuration holds no data, then the value represents the last modified time of the source document. The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.</td>
+</tr>
+
+<tr>
+    <td><strong><i>endTime</i></strong></td>
+    <td>Int64</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A 64-bit Long timestamp specifying end time of the data that this configuration holds. If this configuration holds no data, then the value represents the last modified time of the source document. The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970</td>
+</tr>
+
+<tr>
+    <td><strong><i>timeOffset</i></strong></td>
+    <td>Int64</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A 64-bit Long value specifying the time offset in nanoseconds that is applied to all timestamp fields within the collection of child documents in the Configuration Document Collection. This value can be either positive or negative</td>
+</tr>
+
+<tr>
+    <td><strong><i>description</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string description of the data that this configuration holds.</td>
+</tr>
+
+<tr>
+    <td><strong><i>name</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A free form string name for the data that this configuration holds.</td>
+</tr>
+
+<tr>
+    <td><strong><i>source</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>The source file name (including extension) for the data held by the configuration.</td>
+</tr>
+
+<tr>
+    <td><strong><i>state</i></strong></td>
+    <td>Fixed String</td>
+    <td>Yes</td>
+    <td>Unknown</td>
+    <td>A fixed type field that describes the last known state of the configuration document. Valied options are:  Importing, Live, Historic, Invalid, Merging, Deleted.</td>
+</tr>
+
+<tr>
+    <td><strong><i>sourceType</i></strong></td>
+    <td>Fixed String</td>
+    <td>Yes</td>
+    <td>Data</td>
+    <td>A fixed value describing the source type of the primary data held by this configuration. Valid options are: Configuration, Data, Experiment, Simulation, Run, Period, Session, Event, Day, Month, Year, Lap</td>
+</tr>
+
+<tr>
+    <td><strong><i>tags</i></strong></td>
+    <td>TagDoc[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of key/value pair free form string values. Used to store meta data related to the data stored by this configuration.</td>
+</tr>
+
+<tr>
+    <td><strong><i>configDefsDocIds</i></strong></td>
+    <td>String[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of unique identifiers (id) of the ConfigDefinitionsDoc document specific to the type of definition doc referenced by the configDoc. Used for informational purposes to enable fast retrieval of all the definitions used in a single Configuration Document Collection</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
             <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
             </tr>
-            <tr>
-                <td><strong><i>subConfigDocs</i></strong></td>
-                <td>Array [<a href="doc_conf_subConfigDoc.html">SubConfigDoc</a>]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of <a href="doc_conf_subConfigDoc.html">SubConfigDoc</a> that store the metadata data recorded.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>timeSpanDocs</i></strong></td>
-                <td>Array [<a href="doc_data_timeSpanDoc.html">TimeSpanDoc</a>]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of <a href="doc_data_timeSpanDoc.html">TimeSpanDoc</a> which hold segmented time intervals at which data was recorded.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>startTime</i></strong></td>
-                <td>64-bit Long</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying start time of the data that this document holds.
-                    If this document holds no data, then the value represents the last modified time of the source document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>endTime</i></strong></td>
-                <td>64-bit Long</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying end time of the data that this document holds. If this document holds no data, then the value represents the last modified time of the source document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>timeOffset</i></strong></td>
-                <td>64-bit Long</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long value specifying the time offset in nanoseconds that is applied to all timestamp fields within the
-                    collection of subConfigDocs documents in this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>description</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string description of the data that this document holds.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>name</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string name for the data that this document holds.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>source</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>Regno</td>
-                <td>
-                    The source file name (including extension) for the data held by this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>state</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>Unknown</td>
-                <td>
-                    A free form string description of the state of this document. This field can be excluded when generating the <i>id</i>.
-                </td>
-            </tr>
-        <tr>
-            <td><strong><i>sourceType</i></strong></td>
-            <td>Fixed String</td>
-            <td>No</td>
-            <td>Data</td>
-            <td>
-                A fixed type description of the primary data held by this document.
-                Valid options are: <strong>Configuration, Data, Experiment, Simulation, Run, Period, Session, Event, Day, Month, Year, Lap, Audio, Video, Metrics</strong>.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>tags</i></strong></td>
-	        <td>Array [<a href="doc_data_tagDataDoc.html">TagDoc</a>]</td>
-                <td>No</td>
-            <td>-</td>
-            <td>
-                An array of <a href="doc_data_tagDataDoc.html">TagDoc</a> (key/pair) free form string values. Used to store meta data related to the data stored by this document.
-            </td>
-        </tr>
-            <tr>
-                <td><strong><i>configDefsDocIds</i></strong></td>
-                <td>Array [String]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of the unique identifiers <i>(id)</i> of each associated <a href="doc_info_configDefinitionsDoc.html"><strong>ConfigDefinitionsDoc</strong></a> document.
-                    Used for informational purposes to enable fast retrieval of all the definitions used in a single Configuration Document Collection.
-                    This field can be excluded when generating the <i>id</i>.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>identityDocIds</i></strong></td>
-	            <td>Array [String]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of the unique identifiers <i>(id)</i> of each
-                    associated <a href="doc_ident_identityDoc.html"><strong>IdentityDoc</strong></a> document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>ConfigDoc</td>
-                <td>
-                    The fixed value is always set to <strong>ConfigDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -340,7 +308,7 @@
             var webAuth = new auth0.WebAuth({
                 clientID: 'v1yRbI8lsjcElFtgffwKuJ7n0UWzJTMW',
                 domain: 'regno.eu.auth0.com',
-                redirectUri: 'https://www.regnostandard.com/doc_conf_configDoc.html',
+                redirectUri: 'https://www.regnostandard.com/doc_info_configDefinitionsDoc.html',
                 audience: 'https://regno.eu.auth0.com/api/v2/',
                 scope: 'openid',
                 responseType: 'token id_token'
@@ -389,6 +357,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

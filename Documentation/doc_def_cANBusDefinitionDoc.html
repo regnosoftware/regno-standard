@@ -199,67 +199,55 @@
                 <th>Description</th>
             </tr>
         </thead>
-
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
 
-            </tr>
-            <tr>
-                <td><strong><i>name</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string value to name the CAN bus.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>globalMask</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string value of the global bit mask applied on this CAN bus.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>linkSpeed</i></strong></td>
-                <td>64-bit Double</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Double value representing the link speed in hertz of this CAN bus.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>canBufferDefDocs</i></strong></td>
-                <td>Array [<a href="doc_def_cANBufferDefinitionDoc.html">CANBufferDefinitionDoc</a>]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of the associated <a href="doc_def_cANBufferDefinitionDoc.html"><strong>CANBufferDefinitionDoc</strong></a> document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>CANBusDefDoc</td>
-                <td>
-                    The fixed value is always set to <strong>CANBusDefDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
 
-</section>
+<tr>
+    <td><strong><i>name</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A free form string value to name the conversion.</td>
+</tr>
+
+<tr>
+    <td><strong><i>globalMask</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string value of the global bit mask applied on this CAN bus.</td>
+</tr>
+
+<tr>
+    <td><strong><i>linkSpeed</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A Double value representing the link speed in hertz of this CAN bus.</td>
+</tr>
+
+<tr>
+    <td><strong><i>cANBufferDefDocs</i></strong></td>
+    <td>CANBufferDefDoc[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of the associated CANBufferDefinitionDoc document.</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -316,6 +304,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

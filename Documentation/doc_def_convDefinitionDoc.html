@@ -187,107 +187,103 @@
                 <th>Description</th>
             </tr>
         </thead>
-
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
 
-                </td>
 
-            </tr>
-            <tr>
-                <td><strong><i>name</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string value to name the conversion.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>conversionType</i></strong></td>
-                <td>Fixed String</td>
-                <td>No</td>
-                <td>Rational</td>
-                <td>
-                    A fixed type description of the conversionType.
-                    Valid options are: <strong>Rational, Table, Text</strong>.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>units</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string representing the conversion units.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>format</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A C style format used to display the conversion data value. See the
-                    section <a href="doc_formatStrings.html"><strong>Format Strings</strong></a> for details and examples.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>interpolate</i></strong></td>
-                <td>Fixed String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A fixed string to enable interpolation of the mapped data values. Valid
-                    options are: <strong>True, False</strong>.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>coefficients</i></strong></td>
-                <td>Array [64-bit Double]</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    An array of 64-bit Double coefficients that are used for the rational conversion operation.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>conversionTable</i></strong></td>
-                <td>Array [64-bit Double, 64-bit Double]</td>
-                <td>Yes</td>
-                <td>-</td>
-            <td>
-                    An array of 64-bit Double key/pair values.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>conversions</i></strong></td>
-                <td>Array [64-bit Double, String]</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    An array of 64-bit Double and String key/pair values.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>ConversionDefDoc</td>
-                <td>
-                    The fixed value is always set to <strong>ConversionDefDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<tr>
+    <td><strong><i>name</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string value to name the conversion.</td>
+</tr>
 
-</section>
+<tr>
+    <td><strong><i>conversionType</i></strong></td>
+    <td>Fixed String</td>
+    <td>Yes</td>
+    <td>Rational</td>
+    <td>A free form string value to describe the type of the conversion.</td>
+</tr>
+
+<tr>
+    <td><strong><i>units</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string representing the conversion units.</td>
+</tr>
+
+<tr>
+    <td><strong><i>format</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A C style format used to display the conversion data value. See the section Format Strings for details and examples.</td>
+</tr>
+
+<tr>
+    <td><strong><i>interpolate</i></strong></td>
+    <td>Boolean</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A fixed string to enable interpolation of the mapped data values. Valid options are: True, False.</td>
+</tr>
+
+<tr>
+    <td><strong><i>coefficients</i></strong></td>
+    <td>Double[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of 64-bit Double coefficients that are used for the rational conversion operation.</td>
+</tr>
+
+<tr>
+    <td><strong><i>conversionTable</i></strong></td>
+    <td>IDictionary`2</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of 64-bit Doubles key/pair values used for table conversions.</td>
+</tr>
+
+<tr>
+    <td><strong><i>conversions</i></strong></td>
+    <td>IDictionary`2</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of 64-bit Double and String key/pair values.</td>
+</tr>
+
+<tr>
+    <td><strong><i>id</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>type</i></strong></td>
+    <td>Fixed String</td>
+    <td>No</td>
+    <td>AliasDoc</td>
+    <td>Description not available</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -344,6 +340,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

@@ -195,75 +195,70 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
 
-            </tr>
-            <tr>
-                <td><strong><i>name</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string value to name the CAN buffer.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>mode</i></strong></td>
-                <td>Fixed String</td>
-                <td>No</td>
-                <td>Unused</td>
-                <td>
-                    A fixed string representing the CAN buffer mode type. Valid options
-                    are: <strong>Unused, Receive, Transmit, Reserved</strong>.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>receiveMask</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string value of the receive bit mask applied on this CAN buffer.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>dataRate</i></strong></td>
-                <td>64-bit Long</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    The data rate interval in nanoseconds of this CAN buffer.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>canMessageDefDocs</i></strong></td>
-                <td>Array [<a href="doc_def_cANMessageDefinitionDoc.html">CANMessageDefinitionDoc</a>]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An associated <a href="doc_def_cANMessageDefinitionDoc.html"><strong>CANMessageDefinitionDoc</strong></a> document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>CANBufferDefDoc</td>
-                <td>
-                    The fixed value is always set to <strong>CANBufferDefDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
 
-</section>
+<tr>
+    <td><strong><i>mode</i></strong></td>
+    <td>Fixed String</td>
+    <td>No</td>
+    <td>Unused</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>receiveMask</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>dataRate</i></strong></td>
+    <td>Int64</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>cANMessageDefDocs</i></strong></td>
+    <td>CANMessageDefDoc[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>id</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>type</i></strong></td>
+    <td>Fixed String</td>
+    <td>No</td>
+    <td>AliasDoc</td>
+    <td>Description not available</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -320,6 +315,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

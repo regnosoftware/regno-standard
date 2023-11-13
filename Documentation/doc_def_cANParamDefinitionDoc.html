@@ -194,77 +194,78 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>paramDefDocId</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of
-                    the <a href="doc_def_paramDefinitionDoc.html"><strong>ParamDefinitionDoc</strong></a> document that holds
-                    the properties for the parameter associated with this CAN parameter.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>startBit</i></strong></td>
-                <td>64-bit Long</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long value representing the start bit of the parameter in the parent message instance.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>bitLength</i></strong></td>
-                <td>64-bit Long</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long value representing the length of the message in bytes.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>dataType</i></strong></td>
-                <td>Fixed String</td>
-                <td>No</td>
-                <td>Signed</td>
-                <td>
-                    A fixed string representing the CAN parameter data type. Valid options
-                    are: <strong>Signed, Unsigned, Float</strong>.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>byteOrder</i></strong></td>
-                <td>Fixed String</td>
-                <td>No</td>
-                <td>MSBFirst</td>
-                <td>
-                    A fixed string representing the CAN parameter byte ordering. Valid options
-                    are: <strong>MSBFirst, MSBLast</strong>.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>CANParamDefDoc</td>
-                <td>
-                    The fixed value is always set to <strong>CANParamDefDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
 
-</section>
+
+<tr>
+    <td><strong><i>paramDefDocId</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>startBit</i></strong></td>
+    <td>Int32</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>bitLength</i></strong></td>
+    <td>Int32</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>dataType</i></strong></td>
+    <td>Fixed String</td>
+    <td>No</td>
+    <td>Signed</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>byteOrder</i></strong></td>
+    <td>Fixed String</td>
+    <td>No</td>
+    <td>MSBFirst</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>id</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>type</i></strong></td>
+    <td>Fixed String</td>
+    <td>No</td>
+    <td>AliasDoc</td>
+    <td>Description not available</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -321,6 +322,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

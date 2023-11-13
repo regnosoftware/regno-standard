@@ -187,69 +187,45 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
 
-            </tr>
-            <tr>
-                <td><strong><i>configDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document
-                    that this document is associated with.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>eventDefDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of
-                    the <a href="doc_def_eventDefinitionDoc.html"><strong>EventDefinitionDoc</strong></a> that holds the
-                    properties for the event definition associated with the data values stored in this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>time</i></strong></td>
-                <td>64-bit Long</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying time of the event instance.
-                    The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>status</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string status value for the event instance.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>EventDataDoc</td>
-                <td>
-                    The fixed value is always set to <strong>EventDataDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
 
-</section>
+<tr>
+    <td><strong><i>eventDefDocId</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>The unique identifier (id) of the EventDefinitionDoc that holds the properties for the event definition associated with the data values stored in this document. </td>
+</tr>
+
+<tr>
+    <td><strong><i>time</i></strong></td>
+    <td>Int64</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A 64-bit Long timestamp specifying time of the event instance. The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.</td>
+</tr>
+
+<tr>
+    <td><strong><i>status</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string status value for the event instance.</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
 
 <!--Auth0 Script-->
 <script>
@@ -307,6 +283,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

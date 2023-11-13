@@ -180,150 +180,74 @@
 </section>
 
 <section>
-  
     <table class="table table-bordered table-striped table-info">
         <thead>
-        <tr>
-            <th>Field</th>
-            <th nowrap>Data Type</th>
-            <th>Required</th>
-            <th>Default</th>
-            <th>Description</th>
-        </tr>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
         </thead>
         <tbody>
-        <tr>
-            <td><strong><i>id</i></strong></td>
-            <td>String</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-            </td>
 
-        </tr>
-        <tr>
-            <td><strong><i>configDocId</i></strong></td>
-            <td>String</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                The unique identifier <i>(id)</i> of the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document
-                that this document is associated with.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>paramDefDocId</i></strong></td>
-            <td>String</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                The unique identifier <i>(id)</i> of the <a href="doc_def_paramDefinitionDoc.html"><strong>ParamDefinitionDoc</strong></a> that
-                holds the properties for the parameter associated with the data values stored in this document.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>startTime</i></strong></td>
-            <td>64-bit Long</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                A 64-bit Long timestamp specifying the start time of the data that this document holds. The
-                timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>endTime</i></strong></td>
-            <td>64-bit Long</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                A 64-bit Long timestamp specifying the end time of the data that this document holds. The
-                timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>min</i></strong></td>
-            <td>64-bit Double</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                A 64-bit Double value specifying the minimum value of the data that this document holds.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>max</i></strong></td>
-            <td>64-bit Double</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                A 64-bit Double value specifying the maximum value of the data that this document holds.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>sampleTimes</i></strong></td>
-            <td>Array [Byte]</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                An array of gzip compressed 64-bit Long values. Each value represents the timestamp value of the sample at the associated array index. The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>sampleValues</i></strong></td>
-            <td>Array [Byte]</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                An array of gzip compressed 64-bit Double values. Each value represents the sample value at the associated array index.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>sampleCount</i></strong></td>
-            <td>64-bit Double</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                A 64-bit Long that holds the value for the number of samples in a document.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>dataType</i></strong></td>
-            <td>64-bit Double</td>
-            <td>Yes</td>
-            <td>Double</td>
-            <td>
-                A 64-bit Long that holds the value for the number of samples in a document.
-                Valid options are: <strong>Double, Long, Byte.</strong>.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>type</i></strong></td>
-            <td>Fixed String</td>
-            <td>Fixed</td>
-            <td>ParamSamplesDoc</td>
-            <td>
-                The fixed value is always set to <strong>ParamSamplesDoc</strong>.
-            </td>
-        </tr>
-        </tbody>
-    </table>
 
-    <div class="alert alert-info" role="alert">
-        When used with the Regno Platform, for storage and bandwidth optimization, <strong>sampleValues</strong> and <strong>sampleTimes</strong> within this document are stored as a compressed array of bytes, using standard gzip compression.<br />
-        To read data, <strong>sampleValues</strong> and <strong>sampleTimes</strong> can be restored by un-zipping the compressed file, using standard gzip.
-    </div>
-    <div class="alert alert-info" role="alert">
-        C# Example:<br />
-        using (var zipStream = new GZipStream(new MemoryStream(data), CompressionMode.Decompress))<br />
-        using (var resultStream = new MemoryStream())<br />
-        {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;zipStream.CopyTo(resultStream);<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return resultStream.ToArray();<br />
-        }
-    </div>
-</section>
-  <!--Auth0 Script-->
+<tr>
+    <td><strong><i>paramDefDocId</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>The unique identifier (id) of the ParamDefinitionDoc that holds the properties for the parameter associated with the data values stored in this document. </td>
+</tr>
+
+<tr>
+    <td><strong><i>startTime</i></strong></td>
+    <td>Int64</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A 64-bit Long timestamp specifying the start time of the data that this document holds. The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.</td>
+</tr>
+
+<tr>
+    <td><strong><i>endTime</i></strong></td>
+    <td>Int64</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A 64-bit Long timestamp specifying the end time of the data that this document holds. The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.</td>
+</tr>
+
+<tr>
+    <td><strong><i>min</i></strong></td>
+    <td>Double</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A 64-bit Double value specifying the minimum value of the data that this document holds.</td>
+</tr>
+
+<tr>
+    <td><strong><i>max</i></strong></td>
+    <td>Double</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A 64-bit Double value specifying the maximum value of the data that this document holds.</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+<!--Auth0 Script-->
 <script>
     (
         function () {
@@ -379,6 +303,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

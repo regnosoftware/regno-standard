@@ -192,89 +192,71 @@
                 <th>Description</th>
             </tr>
         </thead>
-
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
 
-                </td>
 
-            </tr>
-            <tr>
-                <td><strong><i>sourceId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A free form string identifier for the event.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>group</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string value to associate a group with the event.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>priority</i></strong></td>
-                <td>Fixed String</td>
-                <td>Yes</td>
-                <td>High</td>
-                <td>
-                    A fixed string value describing the priority of the event.
-                    <br/>
-                    Valid options are: <strong>High, Medium, Low, Debug, Unknown</strong>.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>name</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string value to name the event.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>description</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string description of the event.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>conversions</i></strong></td>
-                <td>Array [<a href="doc_def_convDefinitionDoc.html">ConversionDefDoc</a>]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of the <a href="doc_def_convDefinitionDoc.html"><strong>ConversionDefDoc</strong></a> used to convert the
-                    event raw data values into a display value. Multiple types of conversion documents exist.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>EventDefDoc</td>
-                <td>
-                    The fixed value is always set to <strong>EventDefDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<tr>
+    <td><strong><i>sourceId</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A free form string identifier for the event.</td>
+</tr>
 
-</section>
+<tr>
+    <td><strong><i>group</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string value to associate a group with the event.</td>
+</tr>
+
+<tr>
+    <td><strong><i>priority</i></strong></td>
+    <td>Fixed String</td>
+    <td>No</td>
+    <td>UnKnown</td>
+    <td>A fixed string value describing the priority of the event. Valid options are: High, Medium, Low, Debug.</td>
+</tr>
+
+<tr>
+    <td><strong><i>name</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string value to name the conversion.</td>
+</tr>
+
+<tr>
+    <td><strong><i>description</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string description of the event.</td>
+</tr>
+
+<tr>
+    <td><strong><i>eventType</i></strong></td>
+    <td>Fixed String</td>
+    <td>No</td>
+    <td>Event</td>
+    <td>A fixed string value describing the type of the event being logged. Valid options are: Event, Error, Annotation, Alert</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -331,6 +313,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

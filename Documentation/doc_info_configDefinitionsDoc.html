@@ -184,87 +184,55 @@
                 <th>Description</th>
             </tr>
         </thead>
-
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
 
-                </td>
-            </tr>
 
-            <tr>
-                <td><strong><i>configDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document
-                    that this document is associated with.
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <strong>
-                        <i>defDocIds</i>
-                    </strong>
-                </td>
-                <td>Array [String]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of the unique identifiers
-                    <i>(id)</i> for each
-                    of the type specific definition documents that are referenced.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>defDocType</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    Type of the <strong>ConfigDefinitionsDoc</strong>
-                    valid values are <strong>EventDefDocIds, CanBusDefDocIds</strong>.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>defDocSubTypes</i></strong></td>
-                <td>Array [String]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of sub types of the specified definition type.<br>
-                    The field is a free-form array of strings that provide an extension for definition types.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>identityDocIds</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of the unique identifiers <i>(id)</i> of each
-                    associated <a href="doc_ident_identityDoc.html"><strong>IdentityDoc</strong></a> document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>ConfigDefsDoc</td>
-                <td>
-                    The fixed value is always set to <strong>ConfigDefsDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<tr>
+    <td><strong><i>configDocId</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>The unique identifier (id) of the ConfigDoc document that this document is associated with.</td>
+</tr>
 
-</section>
+<tr>
+    <td><strong><i>defDocIds</i></strong></td>
+    <td>String[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of the unique identifiers (id) for each of the type specific definition documents that are referenced.</td>
+</tr>
+
+<tr>
+    <td><strong><i>defDocType</i></strong></td>
+    <td>Fixed String</td>
+    <td>Yes</td>
+    <td>EventDefDocIds</td>
+    <td>The type of the definition document for which ids are stored.</td>
+</tr>
+
+<tr>
+    <td><strong><i>defDocSubTypes</i></strong></td>
+    <td>String[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of the sub types associated with the type of the definition document.</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -321,6 +289,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

@@ -175,86 +175,62 @@
 <section>
     <table class="table table-bordered table-striped table-info">
         <thead>
-        <tr>
-            <th>Field</th>
-            <th nowrap>Data Type</th>
-            <th>Required</th>
-            <th>Default</th>
-            <th>Description</th>
-        </tr>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
         </thead>
         <tbody>
-        <tr>
-            <td><strong><i>id</i></strong></td>
-            <td>String</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-            </td>
 
-        </tr>
-        <tr>
-            <td><strong><i>configDocId</i></strong></td>
-            <td>String</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                The unique identifier <i>(id)</i> of the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document
-                that this document is associated with.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>paramDefDocId</i></strong></td>
-            <td>String</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                The unique identifier <i>(id)</i> of the <a href="doc_def_paramDefinitionDoc.html"><strong>ParamDefinitionDoc</strong></a> that
-                holds the properties for the parameter associated with the data values stored in this document.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>time</i></strong></td>
-            <td>64-bit Long</td>
-            <td>No</td>
-            <td>-</td>
-            <td>
-                A 64-bit Long timestamp specifying the time of the associated data. The timestamp represents
-                the number of nanoseconds since the reference time of midnight, 1st January 1970.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>value</i></strong></td>
-            <td>String</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                A free form string value.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>constant</i></strong></td>
-            <td>Boolean</td>
-            <td>Yes</td>
-            <td>-</td>
-            <td>
-                Value indicating if the current data is constant within the current configuration.
-            </td>
-        </tr>
-        <tr>
-            <td><strong><i>type</i></strong></td>
-            <td>Fixed String</td>
-            <td>Fixed</td>
-            <td>ParamStringValueDoc</td>
-            <td>
-                The fixed value is always set to <strong>ParamStringValueDoc</strong>.
-            </td>
-        </tr>
-        </tbody>
-    </table>
 
-</section>
+<tr>
+    <td><strong><i>paramDefDocId</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>The unique identifier (id) of the ParamDefinitionDoc document that holds the properties for the parameter associated with the data values stored in this document. </td>
+</tr>
+
+<tr>
+    <td><strong><i>time</i></strong></td>
+    <td>Int64</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A 64-bit Long timestamp value.</td>
+</tr>
+
+<tr>
+    <td><strong><i>value</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string value.</td>
+</tr>
+
+<tr>
+    <td><strong><i>constant</i></strong></td>
+    <td>Boolean</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Boolean value indicating if the current data is constant within the current configuration.</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
 
 <!--Auth0 Script-->
 <script>
@@ -312,6 +288,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

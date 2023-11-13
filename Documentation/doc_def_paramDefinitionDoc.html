@@ -187,108 +187,103 @@
                 <th>Description</th>
             </tr>
         </thead>
-
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
 
-            </tr>
 
-            <tr>
-                <td><strong><i>sourceId</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string description of the source identifier for this parameter data.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>groups</i></strong></td>
-                <td>Array [String]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of free form strings used to generate a tree structure of the groups and
-                    subgroups that parameter belongs to. The root group should be the first entry of the array value.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>name</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string value to name the parameter.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>description</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string description of the parameter.
-                </td>
-            </tr>
-        <tr>
-            <td><strong><i>aliases</i></strong></td>
-            <td>Array [<a href="doc_def_aliasDefinitionDoc.html">AliasDoc</a>]</td>
-            <td>No</td>
-            <td>-</td>
-            <td>
-                Collection of alias names associated with this ParamDefDoc
-            </td>
-        </tr>
-            <tr>
-                <td><strong><i>format</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A C style format used to display the parameter data value. See the
-                    section <a href="doc_formatStrings.html"><strong>Format Strings</strong></a> for details and examples.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>conversion</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the conversion document used to convert the parameter data
-                    value into a display value. Multiple types of conversion documents exist.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>channelDefDocIds</i></strong></td>
-                <td>Array [String]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of the unique identifiers <i>(id)</i> for each of
-                    the <a href="CHANNEL_DEFINITION_DOC"><strong>ChannelDefinitionDoc</strong></a> documents associated with this parameter.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>ParamDefDoc</td>
-                <td>
-                    The fixed value is always set to <strong>ParamDefDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
+<tr>
+    <td><strong><i>sourceId</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A free form string description of the source for this parameter data.</td>
+</tr>
 
-</section>
+<tr>
+    <td><strong><i>groups</i></strong></td>
+    <td>String[]</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>An array of free form strings used to generate a tree structure of the groups and subgroups that parameter belongs to. The root group should be the first entry of the array value.</td>
+</tr>
+
+<tr>
+    <td><strong><i>name</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A free form string value to name the parameter.</td>
+</tr>
+
+<tr>
+    <td><strong><i>description</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string description of the parameter.</td>
+</tr>
+
+<tr>
+    <td><strong><i>aliasDefDocs</i></strong></td>
+    <td>AliasDefDoc[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of aliases assigned to this parameter definition document.</td>
+</tr>
+
+<tr>
+    <td><strong><i>format</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A C style format used to display the parameter data value. See the section Format Strings for details and examples.</td>
+</tr>
+
+<tr>
+    <td><strong><i>conversion</i></strong></td>
+    <td>ConversionDefDoc</td>
+    <td>No</td>
+    <td>-</td>
+    <td>The unique conversion associated with the parameter definition.</td>
+</tr>
+
+<tr>
+    <td><strong><i>units</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string describing the units.</td>
+</tr>
+
+<tr>
+    <td><strong><i>tags</i></strong></td>
+    <td>TagDoc[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of key/value pair free form string values. Used to store meta data related to this parameter definition doc.</td>
+</tr>
+
+<tr>
+    <td><strong><i>paramDefDocType</i></strong></td>
+    <td>Fixed String</td>
+    <td>Yes</td>
+    <td>Scalar</td>
+    <td>String values representing the type of the parameter being created.</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -345,6 +340,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

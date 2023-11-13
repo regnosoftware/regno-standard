@@ -184,123 +184,95 @@
                 <th>Description</th>
             </tr>
         </thead>
-
         <tbody>
+
+
+<tr>
+    <td><strong><i>configDocId</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>The unique identifier (id) of the ConfigDoc document that this document is associated with.</td>
+</tr>
+
+<tr>
+    <td><strong><i>paramDefDocId</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>An integer value associated with the parameter definition document instance.</td>
+</tr>
+
+<tr>
+    <td><strong><i>format</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A C style format used to display the parameter data value. See the section Format Strings for details and examples.</td>
+</tr>
+
+<tr>
+    <td><strong><i>unitConversion</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string describing calculation for the unit conversion used for this instance of the parameter. .</td>
+</tr>
+
+<tr>
+    <td><strong><i>units</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string describing the units.</td>
+</tr>
+
+<tr>
+    <td><strong><i>frequencies</i></strong></td>
+    <td>Double[]</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>An array of 64-bit Doubles, specifying frequencies of the embedded ParamDefDoc at time of data capture.</td>
+</tr>
+
+<tr>
+    <td><strong><i>min</i></strong></td>
+    <td>Double</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>The minimum display value for the parameter instance for the given configuration.</td>
+</tr>
+
+<tr>
+    <td><strong><i>max</i></strong></td>
+    <td>Double</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>The maximum display value for the parameter instance for the given configuration.</td>
+</tr>
+
+<tr>
+    <td><strong><i>tags</i></strong></td>
+    <td>TagDoc[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An array of key/value pair free form string values.</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
             <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
             </tr>
-            <tr>
-                <td><strong><i>configDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> with which this
-                    this document is associated.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>paramDefDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_def_paramDefinitionDoc.html"><strong>ParamDefinitionDoc</strong></a> with which this
-                    this document is associated.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>format</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>%5.1f</td>
-                <td>
-                    A c-style format string used to describe the intended format of the stored raw value.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>unitConversion</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>Value*1</td>
-                <td>
-                    A free form string describing calculation for the unit conversion used for this instance of the parameter.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>units</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string describing the units associated with the data values stored in this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>min</i></strong></td>
-                <td>64-bit Double</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    The warning minimum value for the parameter associated with this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>max</i></strong></td>
-                <td>64-bit Double</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    The warning maximum value for the parameter associated with this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>frequencies</i></strong></td>
-                <td>Array [64-bit Double]</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    An array of 64-bit Double values, with each value representing the
-                    frequency that is defined by a parameter.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>identityDocIds</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of the unique identifiers <i>(id)</i> of each
-                    associated <a href="doc_ident_identityDoc.html"><strong>IdentityDoc</strong></a> document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>tags</i></strong></td>
-                <td>Array [String, String]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An array of key/pair free form string values. Used to store meta data related to the data stored by this document.
-                </td>
-            </tr>
-        <tr>
-            <td><strong><i>type</i></strong></td>
-            <td>Fixed String</td>
-            <td>Fixed</td>
-            <td>ConfigParamDefDoc</td>
-            <td>
-                The fixed value is always set to <strong>ConfigParamDefDoc</strong>.
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</section>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -357,6 +329,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

@@ -184,96 +184,94 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
 
-            </tr>
-            <tr>
-                <td><strong><i>timeSpanType</i></strong></td>
-                <td>Fixed String</td>
-                <td>Yes</td>
-                <td>Interval</td>
-                <td>
-                    A fixed string value describing the type of the timespan. Valid options
-                    are: <strong>Interval, Lap, Year, Month, Day, Hour, Minute, Second, Version, Revision, Period, Measurement, Test, Run, Experiment.</strong>
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>number</i></strong></td>
-                <td>64-bit Long</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An integer value associated with the marker instance.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>startTime</i></strong></td>
-                <td>64-bit Long</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying the start time of the marker instance.
-                    The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>endTime</i></strong></td>
-                <td>64-bit Long</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying the end time of the marker instance.
-                    The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>duration</i></strong></td>
-                <td>64-bit Long</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying the duration of the marker instance.
-                    The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>source</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string describing the data source for the marker instance.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>markerType</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A free form string describing the marker instance type.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>TimeSpanDoc</td>
-                <td>
-                    The fixed value is always set to <strong>TimeSpanDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
 
-</section>
+<tr>
+    <td><strong><i>timeSpanType</i></strong></td>
+    <td>Fixed String</td>
+    <td>Yes</td>
+    <td>Interval</td>
+    <td>The time span type.</td>
+</tr>
+
+<tr>
+    <td><strong><i>number</i></strong></td>
+    <td>Int32</td>
+    <td>No</td>
+    <td>-</td>
+    <td>An integer value associated with the time span instance.</td>
+</tr>
+
+<tr>
+    <td><strong><i>startTime</i></strong></td>
+    <td>Int64</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A 64-bit Long timestamp specifying the start time of the time span instance. The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.</td>
+</tr>
+
+<tr>
+    <td><strong><i>endTime</i></strong></td>
+    <td>Int64</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A 64-bit Long timestamp specifying end time of the time span instance. The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.</td>
+</tr>
+
+<tr>
+    <td><strong><i>duration</i></strong></td>
+    <td>Int64</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A 64-bit Long value specifying the duration of the time span instance. The value represents the number of nanoseconds between start and end time.</td>
+</tr>
+
+<tr>
+    <td><strong><i>source</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string describing the data source for the time span instance.</td>
+</tr>
+
+<tr>
+    <td><strong><i>markerType</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A free form string describing the time span instance type. </td>
+</tr>
+
+<tr>
+    <td><strong><i>id</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>type</i></strong></td>
+    <td>Fixed String</td>
+    <td>No</td>
+    <td>AliasDoc</td>
+    <td>Description not available</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -330,6 +328,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

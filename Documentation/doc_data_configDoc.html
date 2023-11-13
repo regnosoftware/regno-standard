@@ -183,90 +183,64 @@
                 <th>Description</th>
             </tr>
         </thead>
-
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
 
-            </tr>
-            <tr>
-                <td><strong><i>configDocId</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    The unique identifier <i>(id)</i> of the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document
-                    that this document is associated with.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>time</i></strong></td>
-                <td>64-bit Long</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long timestamp specifying the start time of the data that this document holds. The
-                    timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>text</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A free form string value..
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>number</i></strong></td>
-                <td>64-bit Double</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A single 64-bit double number.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>name</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string value to name this documnent.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>description</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string description of this document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>ConfigDataDoc</td>
-                <td>
-                    The fixed value is always set to <strong>ConfigDataDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
 
-</section>
+<tr>
+    <td><strong><i>time</i></strong></td>
+    <td>Int64</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A 64-bit Long timestamp specifying start time of the media file. The timestamp represents the number of nanoseconds since the reference time of midnight, 1st January 1970.</td>
+</tr>
+
+<tr>
+    <td><strong><i>text</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A free form string value.</td>
+</tr>
+
+<tr>
+    <td><strong><i>number</i></strong></td>
+    <td>Double</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A single 64-bit double number.</td>
+</tr>
+
+<tr>
+    <td><strong><i>name</i></strong></td>
+    <td>String</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>A free form string value to name the parameter.</td>
+</tr>
+
+<tr>
+    <td><strong><i>description</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>A free form string description of the parameter.</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
 
 <!--Auth0 Script-->
-
 <script>
     (
         function () {
@@ -322,6 +296,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

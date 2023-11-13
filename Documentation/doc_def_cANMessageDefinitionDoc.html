@@ -165,21 +165,21 @@
 <section>
         <ol class="breadcrumb">        <li><a href="index.html">Home</a></li>        <li><a href="#">Documentation</a></li>        <li><a href="#">Definition Documents</a></li>        <li class="active">CANMessageDefinitionDoc</li>    </ol>
 
-    <h2 id="overview">Definition - <strong>CANMessageDefDoc</strong></h2>
+    <h2 id="overview">Definition - <strong>CANBufferDefDoc</strong></h2>
     <p>
-        The <strong>CANMessageDefinitionDoc</strong> document
-        is a definition document that contains the properties for a CAN message instance.
+        The <strong>CANBufferDefinitionDoc</strong> document
+        is a definition document that contains the properties for a CAN buffer instance.
         <br />
         <br />
-        The <strong>CANMessageDefinitionDoc</strong> document
-        is referenced by the <a href="doc_def_cANBufferDefinitionDoc.html"><strong>CANBufferDefinitionDoc</strong></a> document
-        and provides a container that hold associated <strong>CANParamDefinitionDoc</strong> documents.
+        The <strong>CANBufferDefinitionDoc</strong>  document
+        is referenced by the <a href="doc_def_cANBusDefinitionDoc.html"><strong>CANBusDefinitionDoc</strong></a> document
+        and provides a container that hold
+        associated <a href="doc_def_cANMessageDefinitionDoc.html"><strong>CANMessageDefinitionDoc</strong></a> documents.
         <br />
         <br />
-        The <strong>CANMessageDefinitionDoc</strong> document
-        does not contain a reference to
-        the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document and therefore can be reused
-        by multiple configurations and data sets.
+        The <strong>CANBufferDefinitionDoc</strong>  document
+        does not contain a reference to the <a href="doc_conf_configDoc.html"><strong>ConfigDoc</strong></a> document
+        and therefore can be reused by multiple configurations and data sets.
     </p>
 </section>
 
@@ -195,64 +195,70 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><strong><i>id</i></strong></td>
-                <td>String</td>
-                <td>Yes</td>
-                <td>-</td>
-                <td>
-                    A unique identifier that is referenced by all other documents see section <a href="doc_uniqueIdGeneration.html"><strong>Unique Id Generation</strong></a>.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>description</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string value to describe the CAN message.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>messageId</i></strong></td>
-                <td>String</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A free form string value of the CAN message id (eg 0x213).
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>length</i></strong></td>
-                <td>64-bit Long</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    A 64-bit Long value representing the length of the message in bytes.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>canParamDefDocs</i></strong></td>
-                <td>Array [<a href="doc_def_cANParamDefinitionDoc.html">CANParamDefinitionDoc</a>]</td>
-                <td>No</td>
-                <td>-</td>
-                <td>
-                    An associated <a href="doc_def_cANParamDefinitionDoc.html"><strong>CANParamDefinitionDoc</strong></a> document.
-                </td>
-            </tr>
-            <tr>
-                <td><strong><i>type</i></strong></td>
-                <td>Fixed String</td>
-                <td>Fixed</td>
-                <td>CANMessageDefDoc</td>
-                <td>
-                    The fixed value is always set to <strong>CANMessageDefDoc</strong>.
-                </td>
-            </tr>
-        </tbody>
-    </table>
 
-</section>
+
+<tr>
+    <td><strong><i>description</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>messageId</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>length</i></strong></td>
+    <td>Int32</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>cANParamDefDocs</i></strong></td>
+    <td>CANParamDefDoc[]</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>id</i></strong></td>
+    <td>String</td>
+    <td>No</td>
+    <td>-</td>
+    <td>Description not available</td>
+</tr>
+
+<tr>
+    <td><strong><i>type</i></strong></td>
+    <td>Fixed String</td>
+    <td>No</td>
+    <td>AliasDoc</td>
+    <td>Description not available</td>
+</tr>
+
+<section>
+    <table class="table table-bordered table-striped table-info">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th nowrap>Data Type</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
 <!--Auth0 Script-->
 <script>
     (
@@ -309,6 +315,7 @@
             }
         })();
 </script>
+
 
             </article>
             <!-- end main content -->

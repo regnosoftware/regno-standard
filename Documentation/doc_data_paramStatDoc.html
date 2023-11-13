@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<strong>Regno Standard</strong> ParamStatDoc documentation">
-    <meta name="keywords" content="<strong>Regno Standard</strong>, Regno, Standard, Documentation, Data, ParamStatDoc">
+    <meta name="description" content="Regno Standard ParamStatDoc documentation">
+    <meta name="keywords" content="Regno Standard, Regno, Standard, Documentation, Data, ParamStatDoc">
 
-    <title><strong>Regno Standard</strong> - Documentation - Data Documents - ParamStatDoc</title>
+    <title>Regno Standard - Documentation - Data Documents - ParamStatDoc</title>
 
     <!-- styles -->
     <link href="assets/css/theDocs.all.css" rel="stylesheet">
@@ -288,7 +288,7 @@
             var webAuth = new auth0.WebAuth({
                 clientID: 'v1yRbI8lsjcElFtgffwKuJ7n0UWzJTMW',
                 domain: 'regno.eu.auth0.com',
-                redirectUri: 'http://regno.ai/standard/doc_data_paramStatDoc.html',
+                redirectUri: 'https://www.regnostandard.com/doc_data_paramStatDoc.html',
                 audience: 'https://regno.eu.auth0.com/api/v2/',
                 scope: 'openid',
                 responseType: 'token id_token'
@@ -308,7 +308,7 @@
                     }
                     else if (err != null) {
                         alert('Authentication Failed' + err.errorDescription);
-                        window.location = 'http://regno.ai/standard/doc_documents.html';
+                        window.location = 'https://www.regnostandard.com/doc_documents.html';
                     }
                     else {
                         webAuth.authorize();
@@ -353,11 +353,11 @@
 
         <div class="row">
           <div class="col-md-6 col-sm-6">
-            <p>Copyright &copy; 2021 <strong><strong>Regno Software</strong></strong> Ltd. All rights reserved.</p>
+            <p>Copyright &copy; 2021 <strong>Regno Software</strong> Ltd. All rights reserved.</p>
           </div>
           <div class="col-md-6 col-sm-6">
             <ul class="footer-menu">
-              <li><a target="_blank" href="https://github.com/regnostandard/Regno-Standard-Documentation">Changelog</a></li>
+              <li><a target="_blank" href="https://github.com/regnostandard">Changelog</a></li>
               <li><a href="support.html">Contact us</a></li>
             </ul>
           </div>
